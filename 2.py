@@ -11,6 +11,7 @@ print(type(age))
 print(type(is_student))
 print(type(weight))
 
+#exercise swap the variables values
 a = 10
 b = 3
 
@@ -43,4 +44,5 @@ a = b
 b = c
 
 print("Value of a:", a)
+
 print("Value of b:", b)
