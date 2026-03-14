@@ -1,0 +1,36 @@
+# Super Function()
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def sound(self):
+        print(f"{self.name} make a sound")
+
+class Dog(Animal):
+    def __init__(self, name, breed):
+        super().__init__(name) # Calling the Parent class __init__ method
+        self.breed = breed
+    
+    def sound(self):
+        super().sound() # calling the parent class sound methods
+        print(f"{self.breed} barks")
+
+dog = Dog("nayi", "german shefard")
+dog.sound()
+
+
+# abstract class Method
+
+from abc import ABC, abstractmethod
+
+class vehicle(ABC):
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+class Bike(vehicle):
+    def start_engine(self, name):
+        self.name = name
+
+b = Bike("Royal Enfield")
+print(b.name())
